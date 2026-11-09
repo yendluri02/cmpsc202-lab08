@@ -62,16 +62,16 @@ Dijkstra's algorithm relies on an assumption about the weights. Let's see what h
 Trace Dijkstra's algorithm starting from Node $A$ to find the shortest path to Node $C$.
 
 1. Which node does Dijkstra's algorithm visit first after $A$?
-   > $B$, because its tentative distance is $2$, compared with $5$ for $C$.
+   > *Your Answer Here*
 
 2. What will Dijkstra's algorithm declare as the shortest path to $C$, and what is its weight?
-   > It will update C through B and declare $A \rightarrow B \rightarrow C$ as the shortest path, with weight $2+(-4)=-2$.
+   > *Your Answer Here*
 
 3. Look at the graph manually. What is the *actual* shortest path from $A$ to $C$, and what is its total weight? 
-   > The actual shortest path in this graph is also $A \rightarrow B \rightarrow C$, with total weight $-2$.
+   > *Your Answer Here*
 
 4. **The Trap:** Explain exactly *why* Dijkstra's algorithm failed to find the correct shortest path in this scenario.
-   > It did not fail on this particular graph: the negative edge is relaxed before $C$ is finalized, so Dijkstra's algorithm finds the correct result by accident. However, the negative edge violates Dijkstra's nonnegative-weight assumption, so the algorithm is not generally reliable. For example, if a node were finalized before a later negative edge could improve its distance, Dijkstra would not revisit it and would return an incorrect answer. Bellman-Ford should be used when negative edge weights are possible.
+   > *Your Answer Here*
 
 ---
 
