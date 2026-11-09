@@ -62,16 +62,16 @@ Dijkstra's algorithm relies on an assumption about the weights. Let's see what h
 Trace Dijkstra's algorithm starting from Node $A$ to find the shortest path to Node $C$.
 
 1. Which node does Dijkstra's algorithm visit first after $A$?
-   > *Your Answer Here*
+   > $C$, because the direct edge from $A$ to $C$ has weight $1$, while the edge from $A$ to $B$ has weight $2$.
 
 2. What will Dijkstra's algorithm declare as the shortest path to $C$, and what is its weight?
-   > *Your Answer Here*
+   > Dijkstra's algorithm will declare the path $A \rightarrow C$ as the shortest path to $C$, with a weight of $1$.
 
 3. Look at the graph manually. What is the *actual* shortest path from $A$ to $C$, and what is its total weight? 
-   > *Your Answer Here*
+   > The actual shortest path is $A \rightarrow B \rightarrow C$, with a total weight of $2+(-5)=-3$.
 
 4. **The Trap:** Explain exactly *why* Dijkstra's algorithm failed to find the correct shortest path in this scenario.
-   > *Your Answer Here*
+   > Dijkstra's algorithm finalized $C$ before visiting $B$ because $C$ initially had the smaller tentative distance ($1$ versus $2$). It assumes that once a node is finalized, no later route can improve its distance. However, the edge $B \rightarrow C$ has a negative weight of $-5$, so visiting $B$ later would improve $C$'s distance from $1$ to $2+(-5)=-3$. Because Dijkstra's algorithm does not revisit finalized nodes, it returns the incorrect result.
 
 ---
 
